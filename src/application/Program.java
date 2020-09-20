@@ -20,7 +20,7 @@ public class Program {
 
         System.out.print("Enter department's name: ");
         String departmentName = sc.nextLine();
-        System.out.print("Enter worker data: ");
+        System.out.println("Enter worker data: ");
         System.out.print("Name: ");
         String workerName = sc.nextLine();
         System.out.print("Level: ");
@@ -38,15 +38,16 @@ public class Program {
             Date contractDate = sdf.parse(sc.next());
             System.out.print("Value per hour: ");
             double valuePerHour = sc.nextDouble();
-            System.out.print("Duration hours");
+            System.out.print("Duration hours: ");
             int hours = sc.nextInt();
             HourContract contract = new HourContract(contractDate, valuePerHour, hours);
             worker.addContract(contract);
 
         }
+
         System.out.println();
-        System.out.print("Enter month and yeaer to calculate income (MM/YYYY): ");
-        String monthAndYear = sc.nextLine();
+        System.out.print("Enter month and year to calculate income (MM/YYYY): ");
+        String monthAndYear = sc.next();
         int month = Integer.parseInt(monthAndYear.substring(0, 2));
         int year = Integer.parseInt(monthAndYear.substring(3));
 
